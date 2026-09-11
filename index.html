@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reforme — Biblioteca de materiais bíblicos para leitura e download.">
+  <title>Reforme — Biblioteca Bíblica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">Reforme</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+      <nav id="navMenu">
+        <a href="#inicio">Início</a>
+        <a href="#materiais">Materiais</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="tag">BIBLIOTECA BÍBLICA</span>
+          <h1>Materiais para <span>conhecer melhor a Bíblia.</span></h1>
+          <p>Encontra livros, estudos, comentários e outros materiais relacionados com a Bíblia, disponíveis para leitura e download.</p>
+          <a href="#materiais" class="btn primary">Explorar materiais</a>
+        </div>
+        <div class="hero-card">
+          <div class="cross">✝</div>
+          <h2>Reforme</h2>
+          <p>Conhecimento, fé e estudo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <span>🔎</span>
+          <input type="text" id="searchInput" placeholder="Pesquisar livros, estudos, comentários...">
+        </div>
+      </div>
+    </section>
+
+    <section class="categories" id="categorias">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">CATEGORIAS</span>
+          <h2>Explora por categoria</h2>
+        </div>
+        <div class="category-grid">
+          <button class="category active" data-category="Todos"><span>📚</span><strong>Todos</strong></button>
+          <button class="category" data-category="Livros"><span>📖</span><strong>Livros</strong></button>
+          <button class="category" data-category="Estudos"><span>📝</span><strong>Estudos</strong></button>
+          <button class="category" data-category="Comentários"><span>💡</span><strong>Comentários</strong></button>
+          <button class="category" data-category="Bíblia"><span>✝️</span><strong>Bíblia</strong></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="materials" id="materiais">
+      <div class="container">
+        <div class="materials-top">
+          <div class="section-heading">
+            <span class="tag">BIBLIOTECA</span>
+            <h2>Materiais disponíveis</h2>
+          </div>
+          <span id="resultCount" class="result-count"></span>
+        </div>
+
+        <div id="materialsGrid" class="materials-grid">
+          <article class="material-card" data-category="Livros" data-title="Introdução ao Estudo da Bíblia">
+            <div class="material-icon">📖</div>
+            <div class="material-info">
+              <span class="category-label">LIVROS</span>
+              <h3>Introdução ao Estudo da Bíblia</h3>
+              <p>Material introdutório para quem deseja aprofundar o estudo das Escrituras.</p>
+              <div class="card-footer">
+                <span>PDF</span>
+                <a href="arquivos/introducao-estudo-biblia.pdf" class="download-btn" download>Baixar ↓</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="material-card" data-category="Estudos" data-title="Estudo do Evangelho de João">
+            <div class="material-icon">📚</div>
+            <div class="material-info">
+              <span class="category-label">ESTUDOS</span>
+              <h3>Estudo do Evangelho de João</h3>
+              <p>Material de estudo dedicado ao Evangelho segundo João.</p>
+              <div class="card-footer">
+                <span>PDF</span>
+                <a href="arquivos/estudo-evangelho-joao.pdf" class="download-btn" download>Baixar ↓</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="material-card" data-category="Comentários" data-title="Comentário Bíblico">
+            <div class="material-icon">💡</div>
+            <div class="material-info">
+              <span class="category-label">COMENTÁRIOS</span>
+              <h3>Comentário Bíblico</h3>
+              <p>Um espaço para disponibilizar comentários e materiais de apoio ao estudo bíblico.</p>
+              <div class="card-footer">
+                <span>PDF</span>
+                <a href="arquivos/comentario-biblico.pdf" class="download-btn" download>Baixar ↓</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+          <span>🔎</span>
+          <h3>Nenhum material encontrado</h3>
+          <p>Tenta pesquisar por outro nome ou categoria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="container about-content">
+        <div>
+          <span class="tag">SOBRE O REFORME</span>
+          <h2>Uma biblioteca simples para estudar a Bíblia.</h2>
+        </div>
+        <p>O Reforme foi pensado para reunir materiais bíblicos num único lugar, permitindo que os visitantes encontrem e descarreguem facilmente os conteúdos disponibilizados.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <strong>Reforme</strong>
+        <p>Biblioteca de materiais bíblicos.</p>
+      </div>
+      <p>© <span id="year"></span> Reforme</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+      </html>
